@@ -2,11 +2,11 @@
 /*
 Wordpress Pidr Detector
 
-Replaces all your 'pidr' words into most humanic and loyal word - chelovek.
+Replaces all your 'pidr' words into most humanictic word.
 
 Plugin Name: Pidr Detector
 Plugin URI: https://slawek.dev
-Description: Replaces all your 'pidr' (set by default or can be specified in words.txt) words into most humanic and loyal word - chelovek.
+Description: Russian oriented plugin that replaces all your 'pidr' (set by default or can be specified in words.txt) words into most humanistic and loyal word - 'chelovek'(human).
 Version: 1.0
 Author: Slawek Bezborodov <slawek@slawek.dev>
 Author URI: https://slawek.dev
@@ -19,7 +19,6 @@ function pidr_detector_content($the_content){
 
 	if(empty(file_get_contents(PIDR_DETECTOR_DIR.'words.txt'))){
 		$rescue_humanity[]='пидр';
-
 	}else{
 		$rescue_humanity=explode(',', file_get_contents(PIDR_DETECTOR_DIR.'words.txt'));
 	}
